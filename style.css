@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.dark-mode {
+  color: #ffeb62;
+  background-color: #060904;
+}
+.light-mode {
+  color: #296386;
+  background-color: #faeafb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: #ffeb62;
+    --main-bg-color: #060904;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+:root {
+  --main-color: #296386;
+  --main-bg-color: #faeafb;
+}
+}
+body {
+  color: var(--main-color);
+  background: var(--main-bg-color);
+  font-size: 62.5%;
+  color-scheme: light dark;
+  transition: 0.3s;
+}
+
+#label-btn-dark-mode{
+  color: var(--main-color);
+}
+
+.pickr {
+  margin: 10px;
+}
+
+#logo {
+  width: 50%;
+  transform: translateX(-100px);
+  position: absolute;
+  top: 35%;
+  left: 50%;
+}
+
+#logoPath {
+  fill: var(--main-color);
+}
+
+#text-box {
+  color: var(--main-color);
+  width: 50%;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#name {
+  font-size: 2.4rem;
+  margin: 20px 0;
+}
+
+#text {
+  font-size: 1rem;
+  line-height: 1.3em;
+}
+
+.box {
+  display: inline-block;
+  margin: 10px 8px 0 0;
+
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-color);
+}
+
+@media (width <= 600px) {
+  #logo {
+    width: 300px;
+    top: 53%;
+  }
+  #text-box {
+    width: 90%;
+  }
+}
